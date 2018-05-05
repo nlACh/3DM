@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">3DM</string>
+    <string name="home">HOME ALL</string>
+    <string name="temp_set">TEMPERATURE</string>
+    <string name="connect">Connect</string>
+    <string name="test">Test</string>
+    <string name="print">Print</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="print_about">Choose a gcode file from the drop down and  hit print.</string>
+    <string name="gcode">GCODE</string>
+    <string name="find">usb devices</string>
+    <string name="connect_about">Select Bluetooth or USB and then hit find, select.</string>
+    <string-array name="dev">
+        <item>ONE</item>
+        <item>TWO</item>
+        <item>THREE</item>
+    </string-array>
+    <string name="BT">Bluetooth</string>
+    <string name="USB">USB</string>
+    <string name="use">USE</string>
+
+</resources>
