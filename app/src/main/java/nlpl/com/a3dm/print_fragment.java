@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-
+/* TODO add file R/W support
+    add file access permissions
+ */
 public class print_fragment extends Fragment {
 
     @Override

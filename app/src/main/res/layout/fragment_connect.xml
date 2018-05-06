@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:checkedButton="@+id/BT"
         app:layout_constraintBottom_toTopOf="@+id/spinner_conn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,18 +59,20 @@
         app:layout_constraintVertical_bias="0.445">
 
         <RadioButton
+            android:id="@+id/BT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/BT" />
 
         <RadioButton
+            android:id="@+id/USB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/USB" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/use"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -81,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/connect"
         android:layout_width="89dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
