@@ -1,10 +1,13 @@
 package nlpl.com.a3dm;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +18,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Set;
 
 
@@ -22,13 +27,18 @@ public class connect_fragment extends Fragment {
 
     private Spinner sp_conn;
     private BluetoothAdapter ba; //BLUETOOTH
-    private Set pairedDevices; //BLUETOOTH
+    private Set<BluetoothDevice> pairedDevices; //BLUETOOTH
     private RadioGroup rg;
     private RadioButton rb;
     private Button bn;
+    private BluetoothDevice bd;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //check if bluetooth is working or not
+        ba = BluetoothAdapter.getDefaultAdapter();
     }
 
     @Override
@@ -43,14 +53,10 @@ public class connect_fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 int id = rg.getCheckedRadioButtonId();
-                //rb = rootView.findViewById(id);
                 spinnerInflater(rootView, id);
             }
         });
-        //populate the spinner...
-        sp_conn = rootView.findViewById(R.id.spinner_conn);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(rootView.getContext(), R.array.dev, android.R.layout.simple_dropdown_item_1line);
-        sp_conn.setAdapter(adapter);
+
         return rootView;
     }
 
@@ -59,14 +65,38 @@ public class connect_fragment extends Fragment {
         /**TODO-- add BT functionality
         TODO-- add USB support
         */
-
+        sp_conn = v.findViewById(R.id.spinner_conn);
         if(id == R.id.BT)
         {
-            Toast.makeText(v.getContext(), "BT selected", Toast.LENGTH_SHORT).show();
+            if (ba == null){
+                Toast.makeText(v.getContext(), "Bluetooth not supported!", Toast.LENGTH_LONG).show();
+            }
+
+            if (ba.isEnabled())
+            {
+                populateBT(v);
+            }
+            else {
+                Intent bt_ON = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(bt_ON, 1);
+            }
         }
         else {
             Toast.makeText(v.getContext(), "USB selected", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void populateBT(View v)
+    {
+        pairedDevices = ba.getBondedDevices();
+        ArrayList<String> list = new ArrayList<String>();
+        if (pairedDevices.size()>0)
+        {
+            for (BluetoothDevice bd:pairedDevices)
+                list.add(bd.getAddress()+'\t'+bd.getName());
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(v.getContext(), android.R.layout.simple_spinner_dropdown_item, list);
+        sp_conn.setAdapter(adapter);
     }
 
 }
