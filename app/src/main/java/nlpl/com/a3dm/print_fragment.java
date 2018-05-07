@@ -19,7 +19,7 @@ public class print_fragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
+//TODO get proper R/W code and custom file associations.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

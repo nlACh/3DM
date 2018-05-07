@@ -62,7 +62,7 @@ public class connect_fragment extends Fragment {
 
     public void spinnerInflater(View v, int id)
     {
-        /**TODO-- add BT functionality
+        /*TODO-- add BT functionality
         TODO-- add USB support
         */
         sp_conn = v.findViewById(R.id.spinner_conn);
