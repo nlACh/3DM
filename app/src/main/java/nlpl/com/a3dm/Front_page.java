@@ -19,6 +19,7 @@ public class Front_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_front_page);
+        loadFragment(new intro());
         //String dir = Environment.getExternalStorageDirectory().toString()+'/'+"3DM";
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         //So that the app starts with the connect fragment.

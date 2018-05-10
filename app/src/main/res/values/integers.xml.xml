@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="STORAGE_READ_PERM">199</integer>
+    <integer name="STORAGE_WRITE_PERM">200</integer>
+</resources>
