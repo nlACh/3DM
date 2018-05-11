@@ -21,4 +21,7 @@
     <string name="USB">USB</string>
     <string name="use">USE</string>
 
+    <!-- DO NOT DELETE!!-->
+    <string name="local_path">/3DM</string>
+
 </resources>
