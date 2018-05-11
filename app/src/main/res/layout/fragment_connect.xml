@@ -45,6 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:orientation="horizontal"
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,12 +60,14 @@
         app:layout_constraintVertical_bias="0.445">
 
         <RadioButton
+            android:layout_margin="@dimen/radio_button_margin"
             android:id="@+id/BT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/BT" />
 
         <RadioButton
+            android:layout_margin="@dimen/radio_button_margin"
             android:id="@+id/USB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
