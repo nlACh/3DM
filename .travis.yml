@@ -39,15 +39,3 @@ before_install:
 
 script:
     - "./gradlew clean build"
-
-
-deploy:
-    provider: releases
-    file: *.apk
-    skip_cleanup: true
-    
-    on:
-        repo: nlACh/3DM
-        tags: true
-        jdk: oraclejdk8
-    api_key: 24eaf3714c1eca0d29698334fa96a65a5e259d04
