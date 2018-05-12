@@ -1,5 +1,4 @@
-# 3DM
-[![Build Status](https://travis-ci.com/nlACh/3DM.svg?branch=master)](https://github.com/nlACh/3DM)
+# 3DM [![Build Status](https://travis-ci.com/nlACh/3DM.svg?branch=master)](https://github.com/nlACh/3DM)
 A 3d printer controller app for Android devices
 
 ###### v1.0
