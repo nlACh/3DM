@@ -12,11 +12,6 @@
     <string name="gcode">GCODE</string>
     <string name="find">usb devices</string>
     <string name="connect_about">Select Bluetooth or USB and then hit find, select.</string>
-    <string-array name="temp">
-        <item>ONE</item>
-        <item>TWO</item>
-        <item>THREE</item>
-    </string-array>
     <string name="BT">Bluetooth</string>
     <string name="USB">USB</string>
     <string name="use">USE</string>
