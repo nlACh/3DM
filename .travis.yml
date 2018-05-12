@@ -1,0 +1,10 @@
+language: android
+jdk: openjdk8
+sudo: enabled
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - android-27
+    - build-tools-27.0.3
