@@ -1,5 +1,5 @@
- # 3DM
-
+# 3DM
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 A 3d printer controller app for Android devices
 
 ###### v1.0
