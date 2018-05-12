@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="STORAGE_READ_PERM">199</integer>
+    <integer name="STORAGE_WRITE_PERM">200</integer>
+    <integer-array name="temp">
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>230</item>
+        <item>240</item>
+        <item>250</item>
+        <item>260</item>
+        <item>270</item>
+    </integer-array>
+</resources>
