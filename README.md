@@ -1,8 +1,8 @@
-# 3DM
+ # 3DM
 
 A 3d printer controller app for Android devices
 
-######v1.0
+###### v1.0
 
 Ability to parse and send gcode to Arduino+RAMPS setup.
 
