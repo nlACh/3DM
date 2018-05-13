@@ -18,5 +18,21 @@
 
     <!-- DO NOT DELETE!!-->
     <string name="local_path">/3DM</string>
+    <string name="type">Type gcode</string>
+    <string name="x">X</string>
+    <string name="_1">.1</string>
+    <string name="_one">1</string>
+    <string name="_ten">10</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="z">Z</string>
+    <string name="output">Output</string>
+    <string name="heater">Heater</string>
+    <string name="send">Send</string>
+    <string name="Temp">Temp</string>
+    <string name="xmin">X minus</string>
+    <string name="xplus">X plus</string>
+    <string name="ymin">Y minus</string>
+    <string name="yplus">Y plus</string>
 
 </resources>
