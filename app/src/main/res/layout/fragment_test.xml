@@ -128,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Y->" />
+        android:text="@string/y" />
 
     <TextView
         android:id="@+id/textView_X"
@@ -227,7 +227,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_up"
-        app:layout_constraintTop_toBottomOf="@+id/x_minus" />
+        app:layout_constraintTop_toBottomOf="@+id/x_minus"
+        android:entries="@array/temp"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -236,7 +237,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        tools:text="@string/Temp"
+        android:text="@string/Temp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/temp_spinner"
         app:layout_constraintEnd_toStartOf="@+id/temp_spinner"
@@ -272,5 +273,18 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_gcode" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="@+id/send_gcode"
+        app:layout_constraintEnd_toStartOf="@+id/send_gcode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/send_gcode" />
 
 </android.support.constraint.ConstraintLayout>

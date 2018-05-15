@@ -4,6 +4,6 @@
     <item
         android:title="@string/connect"
         android:id="@+id/settings"
-        android:icon="@android:drawable/ic_media_play"
+        android:icon="@drawable/settings"
         app:showAsAction="ifRoom"/>
 </menu>

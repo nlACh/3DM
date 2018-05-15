@@ -17,8 +17,11 @@
     <string name="use">USE</string>
 
     <!-- DO NOT DELETE!!-->
+    <!-- Local path -->
     <string name="local_path">/3DM</string>
-    <string name="type">Type gcode</string>
+
+    <!-- other data -->
+    <string name="type">Type gcode here.</string>
     <string name="x">X</string>
     <string name="_1">.1</string>
     <string name="_one">1</string>
@@ -34,5 +37,20 @@
     <string name="xplus">X plus</string>
     <string name="ymin">Y minus</string>
     <string name="yplus">Y plus</string>
+    <string name="y"><![CDATA[Y->]]></string>
+    <string name="clear">CLEAR</string>
 
+    <!-- TEMPERATURE -->
+    <string-array name="temp">
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>230</item>
+        <item>240</item>
+        <item>250</item>
+        <item>260</item>
+        <item>270</item>
+    </string-array>
 </resources>
