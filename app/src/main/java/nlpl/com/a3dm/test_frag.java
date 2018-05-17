@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class test_frag extends Fragment {
 
-    gcode Gcode = new gcode();
+    gcode_helper gh_ = new gcode_helper();
     Spinner temp_spinn;
     int temperature_val = 0;
 
@@ -86,6 +86,7 @@ public class test_frag extends Fragment {
     public void setTemp(int x, View v)
     {
         Toast.makeText(v.getContext(), String.valueOf(x), Toast.LENGTH_SHORT).show();
+        gh_.m_(104);
         //TODO add temperature control.
     }
 
