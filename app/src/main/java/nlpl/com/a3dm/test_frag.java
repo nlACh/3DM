@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class test_frag extends Fragment {
 
-    gcode Gcode = new gcode();
+    gcode_helper Gcode = new gcode_helper();
     Spinner temp_spinn;
     int temperature_val = 0;
 
