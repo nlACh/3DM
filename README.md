@@ -1,4 +1,4 @@
-# 3DM [![Build Status](https://travis-ci.com/nlACh/3DM.svg?branch=master)](https://github.com/nlACh/3DM)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 3DM [![Build Status](https://travis-ci.com/nlACh/3DM.svg?branch=master)](https://github.com/nlACh/3DM)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A 3d printer controller app for Android devices
 
 ###### v1.0
