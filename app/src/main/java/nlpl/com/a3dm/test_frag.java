@@ -23,12 +23,14 @@ public class test_frag extends Fragment {
     gcode_helper gh_ = new gcode_helper();
     Spinner temp_spinn;
     int temperature_val = 0;
+    StringBuilder sb;
 
     //Heater switch
     Switch sw;
 
     //now the buttons.
     ImageButton xm, xp, ym, yp;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,11 +60,12 @@ public class test_frag extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
-                    Toast.makeText(rootView.getContext(), "Set heater on!" + Integer.toString(temperature_val), Toast.LENGTH_SHORT).show();
+                    setTemp(104, rootView, temperature_val);
                 else
-                    Toast.makeText(rootView.getContext(), "Set heater off!" + Integer.toString(temperature_val), Toast.LENGTH_SHORT).show();
+                    setTemp(104, rootView, 0);
             }
         });
+
         //add a listener for the switch
         temp_spinn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -83,10 +86,12 @@ public class test_frag extends Fragment {
         return rootView;
     }
 
-    public void setTemp(int x, View v)
+    public void setTemp(int x, View v, int y)
     {
         Toast.makeText(v.getContext(), String.valueOf(x), Toast.LENGTH_SHORT).show();
-        gh_.m_(104);
+        sb = gh_.m_(104, y);
+        TextView tv = v.findViewById(R.id.textView6);
+        tv.setText(sb);
         //TODO add temperature control.
     }
 

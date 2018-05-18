@@ -27,7 +27,7 @@ public class gcode_helper {
     }
 
     //for commands like M119 M84.
-    public StringBuilder m_(int x)
+    public StringBuilder m_(int x, int t)
     {
         StringBuilder sb = new StringBuilder();
         sb.append('M');
@@ -36,7 +36,12 @@ public class gcode_helper {
             case 84: sb.append(84);
                 break;
 
-            case 119:sb.append(119);
+            case 104: sb.append(104);
+                      sb.append(" S");
+                      sb.append(t);
+                break;
+
+            case 119: sb.append(119);
                 break;
 
             default:
