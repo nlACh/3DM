@@ -1,7 +1,27 @@
 package nlpl.com.a3dm;
 
-public class gcode_helper {
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.support.annotation.Nullable;
 
+public class gcode_helper extends Service {
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent)
+    {
+        return null;
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId)
+    {
+        //TODO: add proper execution
+        return START_STICKY;
+    }
+
+    //Definition for Gcode commands
     //Only linear moves used G1 and homing G28
     public StringBuilder g_(int x)
     {
@@ -47,5 +67,10 @@ public class gcode_helper {
             default:
         }
         return sb;
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
     }
 }
